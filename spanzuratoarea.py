@@ -123,5 +123,15 @@ while g<6:
         print(rasp)
         if rasp.find('-') == -1:#verific daca cuvantul este complet
             print('Felicitari!')
+            turtle.pu()
+            turtle.goto(0,-200)
+            turtle.pd()
+            for i in range(50):
+                if i % 2 == 0:
+                    turtle.color("yellow")
+                else:
+                    turtle.color("red")
+                time.sleep(0.1)
+                turtle.write("FELICITARI!!!", align="center", font=('Arial', 18, 'normal'))
             break
 input()
