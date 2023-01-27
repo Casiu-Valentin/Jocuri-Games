@@ -75,6 +75,7 @@ def desen(g): #procedura de desenare a spanzuratorii si personajului/the procedu
         a.fd(50)
 
 def afis(a,b,c,d): #procedura de afisare a unui text(c) in mod grafic in diverse pozitii(a,b) si intermitent rosu-galben de d ori
+    turtle.ht()
     turtle.pu() #procedure to display a text(c) graphically in various position(a,b) and flashing red-yellow of d times
     turtle.goto(a,b)
     turtle.pd()
@@ -87,11 +88,14 @@ def afis(a,b,c,d): #procedura de afisare a unui text(c) in mod grafic in diverse
         turtle.write(c, move=False, align="center", font=('Arial', 18, 'normal'))
 
 def afis2(a,b,t): #procedura de afisare a unui text(t) in mod grafic in diverse pozitii(a,b)
+    turtle.ht()
     turtle.pu() #procedure to display a text(t) graphically in various position(a,b)
     turtle.goto(a,b)
     turtle.pd()
     turtle.clear()
     turtle.write(t, move=False, align="center", font=('Arial', 18, 'normal'))
+
+
 #Programul principal/The main program
 import random
 import turtle
@@ -107,11 +111,12 @@ afis2(0, -220, rasp)
 print('SPANZURATOAREA')
 print('Ghiceste tara din UE!')
 print(rasp)
-turtle.ht()
-turtle.pu()
-turtle.goto(0,210)
-turtle.pd()
-turtle.write("SPANZURATOAREA",align="center",font=('Arial', 18, 'normal'))
+x=turtle.Turtle()
+x.ht()
+x.pu()
+x.goto(0,250)
+x.pd()
+x.write("SPANZURATOAREA",align="center",font=('Arial', 18, 'normal'))
 g = 0
 desen(g)
 while g<6:
@@ -123,7 +128,7 @@ while g<6:
         if g==6:
             print('Ai pierdut! Tara era', tara)
             afis(0,0,"ESTI SPANZURAT!!!",50)
-            afis(0, -230, "TARA ESTE " + tara + "!!!", 26)
+            afis(0, -250, "TARA ESTE " + tara + "!!!", 26)
             break
         else:
             print('Fara',c,'- mai ai',str(6-g),'incercari!')
