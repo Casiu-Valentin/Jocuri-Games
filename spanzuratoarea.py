@@ -95,7 +95,6 @@ tari = ['AUSTRIA', 'BELGIA', 'BULGARIA','CIPRU', 'CEHIA', 'CROATIA', 'DANEMARCA'
  'LUXEMBURG', 'MALTA', 'OLANDA', 'POLONIA','PORTUGALIA','ROMANIA', 'SLOVACIA', 'SLOVENIA', 'SPANIA', 'SUEDIA']
 turtle.setup (width=500, height=500, startx=1028, starty=0)
 tara = random.choice(tari)
-print(tara)
 rasp = '-' * len(tara)
 print('SPANZURATOAREA')
 print('Ghiceste tara din UE!')
