@@ -77,9 +77,22 @@ def desen(g):
         a.left(70)
         a.fd(50)
 
+def afis(a,b,c,d): #procedura de afisare a unui text(c) in mod grafic in diverse pozitii(a,b) si intermitent rosu-galben
+    turtle.pu() #procedure to display a text(c) graphically in various position(a,b) and flashing red-yellow
+    turtle.goto(a,b)
+    turtle.pd()
+    for i in range(d):
+        if i % 2 == 0:
+            turtle.color("yellow")
+        else:
+            turtle.color("red")
+        time.sleep(0.1)
+        turtle.write(c, move=False, align="center", font=('Arial', 18, 'normal'))
+
 #Programul principal/The main program
 turtle.setup (width=500, height=500, startx=1028, starty=0)
 tara = random.choice(tari)
+print(tara)
 rasp = '-' * len(tara)
 print('SPANZURATOAREA')
 print('Ghiceste tara din UE!')
@@ -99,16 +112,7 @@ while g<6:
         desen(g)
         if g==6:
             print('Ai pierdut! Tara era', tara)
-            turtle.pu()
-            turtle.goto(0,0)
-            turtle.pd()
-            for i in range(50):
-                if i%2==0:
-                    turtle.color("yellow")
-                else:
-                    turtle.color("red")
-                time.sleep(0.1)
-                turtle.write("ESTI SPANZURAT!!!", align="center", font=('Arial', 18, 'normal'))
+            afis(0,0,"ESTI SPANZURAT!!!",75)
             break
         else:
             print('Fara',c,'- mai ai',str(6-g),'incercari!')
@@ -123,15 +127,7 @@ while g<6:
         print(rasp)
         if rasp.find('-') == -1:#verific daca cuvantul este complet
             print('Felicitari!')
-            turtle.pu()
-            turtle.goto(0,-200)
-            turtle.pd()
-            for i in range(50):
-                if i % 2 == 0:
-                    turtle.color("yellow")
-                else:
-                    turtle.color("red")
-                time.sleep(0.1)
-                turtle.write("FELICITARI!!!", align="center", font=('Arial', 18, 'normal'))
+            afis(0,-180, "FELICITARI!!!", 25)
+            afis(0,-220,"TARA ESTE "+tara+"!!!", 50 )
             break
 input()
