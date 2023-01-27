@@ -1,15 +1,11 @@
 # Realizat de /Produced by Casiu George Valentin
 """
-
+Jocul spanzuratoarea
+The Hangman game
+Realizat cu tarile UE/Made with EU countries
 """
-tari = ['AUSTRIA', 'BELGIA', 'BULGARIA','CIPRU', 'CEHIA', 'CROATIA', 'DANEMARCA', 'ESTONIA',
- 'FINLANDA', 'FRANTA', 'GERMANIA', 'GRECIA', 'UNGARIA','IRLANDA', 'ITALIA', 'LETONIA','LITUANIA',
- 'LUXEMBURG', 'MALTA', 'OLANDA', 'POLONIA','PORTUGALIA','ROMANIA', 'SLOVACIA', 'SLOVENIA', 'SPANIA', 'SUEDIA']
-import random
-import turtle
-import time
 
-def desen(g):
+def desen(g): #procedura de desenare a spanzuratorii si personajului/the procedure for drawing the hangman and the character
     a=turtle.Turtle()
     a.ht()
     a.pensize(5)
@@ -90,6 +86,12 @@ def afis(a,b,c,d): #procedura de afisare a unui text(c) in mod grafic in diverse
         turtle.write(c, move=False, align="center", font=('Arial', 18, 'normal'))
 
 #Programul principal/The main program
+import random
+import turtle
+import time
+tari = ['AUSTRIA', 'BELGIA', 'BULGARIA','CIPRU', 'CEHIA', 'CROATIA', 'DANEMARCA', 'ESTONIA',
+ 'FINLANDA', 'FRANTA', 'GERMANIA', 'GRECIA', 'UNGARIA','IRLANDA', 'ITALIA', 'LETONIA','LITUANIA',
+ 'LUXEMBURG', 'MALTA', 'OLANDA', 'POLONIA','PORTUGALIA','ROMANIA', 'SLOVACIA', 'SLOVENIA', 'SPANIA', 'SUEDIA']
 turtle.setup (width=500, height=500, startx=1028, starty=0)
 tara = random.choice(tari)
 print(tara)
@@ -112,7 +114,8 @@ while g<6:
         desen(g)
         if g==6:
             print('Ai pierdut! Tara era', tara)
-            afis(0,0,"ESTI SPANZURAT!!!",75)
+            afis(0,0,"ESTI SPANZURAT!!!",50)
+            afis(0, -220, "TARA ESTE " + tara + "!!!", 26)
             break
         else:
             print('Fara',c,'- mai ai',str(6-g),'incercari!')
@@ -127,7 +130,6 @@ while g<6:
         print(rasp)
         if rasp.find('-') == -1:#verific daca cuvantul este complet
             print('Felicitari!')
-            afis(0,-180, "FELICITARI!!!", 25)
+            afis(0,-180, "FELICITARI!!!", 26)
             afis(0,-220,"TARA ESTE "+tara+"!!!", 50 )
             break
-input()
