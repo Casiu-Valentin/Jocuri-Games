@@ -1,9 +1,7 @@
 # Realizat de /Produced by Casiu George Valentin
 """
-Jocul spanzuratoarea
-The Hangman game
+Jocul spanzuratoarea/The Hangman game
 Realizat cu tarile UE/Made with EU countries.
-Este indicat ca fereastra IDLE-ului sa fie setata pe jumatatea ecranului in stanga/It is recommended that the IDLE window be ste of the left half of screen.
 """
 
 def desen(g): #procedura de desenare a spanzuratorii si personajului/the procedure for drawing the hangman and the character
