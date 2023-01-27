@@ -74,8 +74,8 @@ def desen(g): #procedura de desenare a spanzuratorii si personajului/the procedu
         a.left(70)
         a.fd(50)
 
-def afis(a,b,c,d): #procedura de afisare a unui text(c) in mod grafic in diverse pozitii(a,b) si intermitent rosu-galben
-    turtle.pu() #procedure to display a text(c) graphically in various position(a,b) and flashing red-yellow
+def afis(a,b,c,d): #procedura de afisare a unui text(c) in mod grafic in diverse pozitii(a,b) si intermitent rosu-galben de d ori
+    turtle.pu() #procedure to display a text(c) graphically in various position(a,b) and flashing red-yellow of d times
     turtle.goto(a,b)
     turtle.pd()
     for i in range(d):
