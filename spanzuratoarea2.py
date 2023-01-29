@@ -6,8 +6,7 @@ Realizat cu tarile UE/Made with EU countries.
 """
 
 def desen(g): #procedura de desenare a spanzuratorii si personajului/the procedure for drawing the hangman and the character
-    a=turtle.Turtle()
-    a.ht()
+    a=turtle.Turtle(visible=False)
     a.pensize(5)
     a.color("red")
     if g==0:
@@ -92,7 +91,7 @@ def afis2(a,b,t): #procedura de afisare a unui text(t) in mod grafic in diverse 
     turtle.goto(a,b)
     turtle.pd()
     turtle.clear()
-    turtle.write(t, move=False, align="center", font=('Arial', 18, 'normal'))
+    turtle.write(t, align="center", font=('Arial', 18, 'normal'))
 
 
 #Programul principal/The main program
@@ -106,18 +105,17 @@ tari = ['AUSTRIA', 'BELGIA', 'BULGARIA','CIPRU', 'CEHIA', 'CROATIA', 'DANEMARCA'
 tara = random.choice(tari)
 print(tara)
 rasp = '-' * len(tara)
+g = 0
+desen(g)
 afis2(0, -220, rasp)
 print('SPANZURATOAREA')
 print('Ghiceste tara din UE!')
 print(rasp)
-x=turtle.Turtle()
-x.ht()
+x=turtle.Turtle(visible=False)
 x.pu()
 x.goto(0,250)
 x.pd()
 x.write("SPANZURATOAREA",align="center",font=('Arial', 18, 'normal'))
-g = 0
-desen(g)
 while g<6:
     c = turtle.textinput("SPANZURATOAREA",'Introduceti litera: ')
     try:
