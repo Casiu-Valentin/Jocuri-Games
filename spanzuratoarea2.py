@@ -1,6 +1,7 @@
 # Realizat de /Produced by Casiu George Valentin
 """
-Jocul spanzuratoarea/The Hangman game
+Jocul spanzuratoarea
+The Hangman game
 Realizat cu tarile UE/Made with EU countries.
 """
 
@@ -119,7 +120,13 @@ g = 0
 desen(g)
 while g<6:
     c = turtle.textinput("SPANZURATOAREA",'Introduceti litera: ')
-    c = c.upper()
+    try:
+        c = c.upper()
+    except AttributeError:
+        print("La revedere!!!")
+        afis2(0,0,"La revedere!!!")
+        time.sleep(2)
+        exit()
     if c not in tara:
         g = g + 1
         desen(g)
